@@ -1,0 +1,100 @@
+@use 'variables' as v;
+
+main {
+  padding: 4rem 0;
+  font-family: 'Overpass', sans-serif;
+  div {
+    &#intro {
+      img {
+        &.mobile {
+          width: 100vw;
+          margin: 1.5rem 0;
+        }
+        &.desktop {
+          display: none;
+        }
+      }
+      p {
+        text-align: center;
+        line-height: 1.7rem;
+        padding: 0 2.5rem;
+        &.title {
+          padding: 0 4rem;
+        }
+        &.text {
+          font-size: 16px;
+          margin: 0;
+          color: v.$text-grysh-blue;
+          padding-bottom: 1rem;
+        }
+      }
+    }
+    &#middle {
+      margin-top: 17rem;
+      background-image: url('../images/bg-pattern-circles.svg'),
+        linear-gradient(135deg, v.$bdy-grad-grysh-blue, v.$bdy-grad-desat-blue);
+      background-size: 160%;
+      background-position: 49% -280%;
+      background-repeat: no-repeat;
+      border-radius: 0 6rem 0 6rem;
+      img {
+        width: 100vw;
+        position: relative;
+        top: -11rem;
+      }
+      #middleDiv {
+        position: relative;
+        bottom: 10rem;
+        .title {
+          color: v.$white-clr;
+          font-size: 2.3rem;
+          font-weight: 400;
+          margin: 0.85rem 0 1rem 0;
+        }
+        .text {
+          font-size: 16px;
+          text-align: center;
+          line-height: 1.7rem;
+          padding: 0 2rem;
+          margin: 0;
+          color: v.$lght-gray;
+        }
+      }
+    }
+    &#end {
+      img {
+        &.mobile {
+          width: 100vw;
+          margin: 1.5rem 0;
+        }
+        &.desktop {
+          display: none;
+        }
+      }
+      #endDiv {
+        p {
+          text-align: center;
+          line-height: 1.7rem;
+          padding: 0 2.5rem;
+          &.title {
+            padding: 0 4rem;
+          }
+          &.text {
+            font-size: 16px;
+            margin: 0;
+            color: v.$text-grysh-blue;
+            padding-bottom: 1rem;
+          }
+        }
+      }
+    }
+  }
+  .title {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: v.$text-drk-blue;
+    margin-bottom: 1rem;
+    padding: 0 1.5rem;
+    text-align: center;
+  }
+}
