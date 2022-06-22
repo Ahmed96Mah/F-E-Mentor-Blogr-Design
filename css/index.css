@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+/* Media Queries */
+body {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  grid-template-columns: 1fr;
+  grid-template-areas: 'header' 'main' 'footer';
+}
+body header div#upperHeader {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+body header div#upperHeader #menuDiv {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+body header div#upperHeader #menuDiv ul {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+body header div#upperHeader #menuDiv #login {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+body header div#lowerHeader #lowerDiv {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+body main {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+body main div#intro {
+  display: flex;
+  flex-flow: row wrap-reverse;
+  justify-content: center;
+  align-items: center;
+}
+body main div#middle {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+body main div#end {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+body footer {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* -------- Colors -------- */
+header {
+  grid-area: header;
+  background-image: url('../images/bg-pattern-intro-mobile.svg'),
+    linear-gradient(165deg, hsl(13deg, 100%, 72%), hsl(353deg, 100%, 62%));
+  background-size: 340%;
+  background-position: 36% 33%;
+  border-radius: 0 0 0 6rem;
+}
+header div#upperHeader {
+  margin-top: 4rem;
+  padding: 0 1.5rem;
+}
+header div#upperHeader img#logo {
+  width: 5rem;
+}
+header div#upperHeader #menuDiv {
+  box-shadow: 0rem 1rem 2rem lightgray;
+  font-family: 'Overpass', sans-serif;
+  font-weight: 600;
+}
+header div#upperHeader #menuDiv ul {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+}
+header div#upperHeader #menuDiv ul .listItem {
+  font-size: 1.1rem;
+  color: hsl(208deg, 49%, 24%);
+  text-align: center;
+  width: 90%;
+  padding: 1rem 0;
+}
+header div#upperHeader #menuDiv ul .listItem img.arrowDark {
+  margin-left: 0.3rem;
+}
+header div#upperHeader #menuDiv ul .listItem img.arrowLight {
+  display: none;
+}
+header div#upperHeader #menuDiv ul .listItem img.flip {
+  transition-duration: 2s;
+  transform: rotate(180deg);
+}
+header div#upperHeader #menuDiv ul .listItem .dropDown {
+  margin-top: 1.3rem;
+  padding: 0.8rem 0;
+  background-color: rgba(211, 211, 211, 0.5);
+  border-radius: 0.3rem;
+  line-height: 2.5rem;
+}
+header div#upperHeader #menuDiv ul .listItem .dropDown a {
+  text-decoration: none;
+  color: hsl(207deg, 13%, 34%);
+}
+header div#upperHeader #menuDiv ul .listItem .dropDown.hide {
+  display: none;
+}
+header div#upperHeader #menuDiv ul .listItem.clicked {
+  color: hsl(207deg, 13%, 34%);
+}
+header div#upperHeader #menuDiv #login {
+  width: 90%;
+  border-top: 1px solid rgba(211, 211, 211, 0.5);
+  padding: 2rem 0rem;
+}
+header div#upperHeader #menuDiv #login a {
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: hsl(208deg, 49%, 24%);
+}
+header div#upperHeader #menuDiv #login a:hover {
+  color: hsl(207deg, 13%, 34%);
+}
+header div#upperHeader #menuDiv #login button {
+  /* $clr, $fnt-size, $fnt-wght, $bckGrnd-clr, $brdr-clr, $brdr-radius, $padg-top-btm, $padg-lft-rgt */
+  color: hsl(0deg, 0%, 100%);
+  font-size: 0.95rem;
+  font-weight: 500;
+  background-color: hsl(0deg, 0%, 100%);
+  border: 1px solid hsl(0deg, 0%, 100%);
+  border-radius: 1.5rem;
+  padding: 0.8rem 2rem;
+  font-family: 'Ubuntu', sans-serif;
+  margin-top: 1rem;
+  background: linear-gradient(
+    60deg,
+    hsl(13deg, 100%, 72%),
+    hsl(353deg, 100%, 62%)
+  );
+}
+header div#upperHeader #menuDiv.hide {
+  display: none;
+}
+header div#upperHeader #menuDiv.show {
+  position: absolute;
+  border-radius: 0.3rem;
+  width: 88vw;
+  top: 8rem;
+  right: 6vw;
+  background-color: hsl(0deg, 0%, 100%);
+}
+header div#upperHeader #menuIcon #open.hide {
+  display: none;
+}
+header div#upperHeader #menuIcon #close.hide {
+  display: none;
+}
+header div#lowerHeader {
+  padding: 5rem 2.5rem 9rem 2.5rem;
+}
+header div#lowerHeader div {
+  text-align: center;
+}
+header div#lowerHeader div h1 {
+  font-family: 'Overpass', sans-serif;
+  font-weight: 300;
+  color: hsl(0deg, 0%, 100%);
+  padding-left: 1.2rem;
+}
+header div#lowerHeader div h3 {
+  font-family: 'Overpass', sans-serif;
+  font-weight: 300;
+  color: lightgray;
+}
+header div#lowerHeader div#lowerDiv button {
+  margin-top: 2rem;
+  font-family: 'Ubuntu', sans-serif;
+}
+header div#lowerHeader div#lowerDiv button#start {
+  /* $clr, $fnt-size, $fnt-wght, $bckGrnd-clr, $brdr-clr, $brdr-radius, $padg-top-btm, $padg-lft-rgt */
+  color: hsl(356deg, 100%, 66%);
+  font-size: 1rem;
+  font-weight: 700;
+  background-color: hsl(0deg, 0%, 100%);
+  border: 1px solid hsl(0deg, 0%, 100%);
+  border-radius: 1.5rem;
+  padding: 0.8rem 0.9rem;
+}
+header div#lowerHeader div#lowerDiv button#start:hover {
+  color: hsl(0deg, 0%, 100%);
+  background-color: rgba(255, 255, 255, 0.3);
+  border: rgba(255, 255, 255, 0.3);
+}
+header div#lowerHeader div#lowerDiv button#learn {
+  /* $clr, $fnt-size, $fnt-wght, $bckGrnd-clr, $brdr-clr, $brdr-radius, $padg-top-btm, $padg-lft-rgt */
+  color: hsl(0deg, 0%, 100%);
+  font-size: 1rem;
+  font-weight: 700;
+  background-color: transparent;
+  border: 1px solid hsl(0deg, 0%, 100%);
+  border-radius: 1.5rem;
+  padding: 0.8rem 1.6rem;
+}
+header div#lowerHeader div#lowerDiv button#learn:hover {
+  color: hsl(356deg, 100%, 66%);
+  background-color: hsl(0deg, 0%, 100%);
+}
+
+main {
+  padding: 4rem 0;
+  font-family: 'Overpass', sans-serif;
+}
+main div#intro img.mobile {
+  width: 100vw;
+  margin: 1.5rem 0;
+}
+main div#intro img.desktop {
+  display: none;
+}
+main div#intro p {
+  text-align: center;
+  line-height: 1.7rem;
+  padding: 0 2.5rem;
+}
+main div#intro p.title {
+  padding: 0 4rem;
+}
+main div#intro p.text {
+  font-size: 16px;
+  margin: 0;
+  color: hsl(207deg, 13%, 34%);
+  padding-bottom: 1rem;
+}
+main div#middle {
+  margin-top: 17rem;
+  background-image: url('../images/bg-pattern-circles.svg'),
+    linear-gradient(135deg, hsl(237deg, 17%, 21%), hsl(237deg, 23%, 32%));
+  background-size: 160%;
+  background-position: 49% -280%;
+  background-repeat: no-repeat;
+  border-radius: 0 6rem 0 6rem;
+}
+main div#middle img {
+  width: 100vw;
+  position: relative;
+  top: -11rem;
+}
+main div#middle #middleDiv {
+  position: relative;
+  bottom: 10rem;
+}
+main div#middle #middleDiv .title {
+  color: hsl(0deg, 0%, 100%);
+  font-size: 2.3rem;
+  font-weight: 400;
+  margin: 0.85rem 0 1rem 0;
+}
+main div#middle #middleDiv .text {
+  font-size: 16px;
+  text-align: center;
+  line-height: 1.7rem;
+  padding: 0 2rem;
+  margin: 0;
+  color: lightgray;
+}
+main div#end img.mobile {
+  width: 100vw;
+  margin: 1.5rem 0;
+}
+main div#end img.desktop {
+  display: none;
+}
+main div#end #endDiv p {
+  text-align: center;
+  line-height: 1.7rem;
+  padding: 0 2.5rem;
+}
+main div#end #endDiv p.title {
+  padding: 0 4rem;
+}
+main div#end #endDiv p.text {
+  font-size: 16px;
+  margin: 0;
+  color: hsl(207deg, 13%, 34%);
+  padding-bottom: 1rem;
+}
+main .title {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: hsl(208deg, 49%, 24%);
+  margin-bottom: 1rem;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+footer {
+  background-color: hsl(240deg, 10%, 16%);
+  padding: 5rem 0;
+  border-radius: 0 6rem 0 0;
+  font-family: 'Ubuntu', sans-serif;
+}
+footer #footerLogo {
+  margin-bottom: 4rem;
+}
+footer .footerMenu {
+  margin-bottom: 1rem;
+}
+footer .footerMenu .menuTitle {
+  color: hsl(0deg, 0%, 100%);
+  padding-bottom: 1rem;
+  text-align: center;
+}
+footer .footerMenu p {
+  text-align: center;
+}
+footer .footerMenu p.menuItem a {
+  text-decoration: none;
+  color: darkgray;
+}
+footer .attribution {
+  color: hsl(0deg, 0%, 100%);
+  padding: 0 1rem;
+  margin-top: 1rem;
+  font-size: 12px;
+  text-align: center;
+}
+footer .attribution a {
+  color: darkgray;
+}
+
+body {
+  margin: 0;
+}
