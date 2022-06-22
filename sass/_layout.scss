@@ -1,0 +1,43 @@
+@use 'mixins' as m;
+
+body {
+  @include m.displayGrid(3, 1fr, 'header' 'main' 'footer');
+  header {
+    div {
+      &#upperHeader {
+        @include m.displayFlex(row, nowrap, space-between, center);
+        #menuDiv {
+          @include m.displayFlex(column, nowrap, center, center);
+          ul {
+            @include m.displayFlex(column, nowrap, center, center);
+          }
+          #login {
+            @include m.displayFlex(column, nowrap, center, center);
+          }
+        }
+      }
+      &#lowerHeader {
+        #lowerDiv {
+          @include m.displayFlex(row, nowrap, space-between, center);
+        }
+      }
+    }
+  }
+  main {
+    @include m.displayFlex(column, nowrap, center, center);
+    div {
+      &#intro {
+        @include m.displayFlex(row, wrap-reverse, center, center);
+      }
+      &#middle {
+        @include m.displayFlex(row, wrap, space-around, center);
+      }
+      &#end {
+        @include m.displayFlex(row, wrap, space-around, center);
+      }
+    }
+  }
+  footer {
+    @include m.displayFlex(column, nowrap, center, center);
+  }
+}
