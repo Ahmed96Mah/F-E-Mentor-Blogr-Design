@@ -26,6 +26,7 @@ header {
           padding: 0;
           width: 100%;
           .listItem {
+            cursor: pointer;
             font-size: 1.1rem;
             color: v.$text-drk-blue;
             text-align: center;
@@ -86,6 +87,7 @@ header {
               0.8rem,
               2rem
             );
+            cursor: pointer;
             font-family: 'Ubuntu', sans-serif;
             margin-top: 1rem;
             background: linear-gradient(
@@ -95,10 +97,10 @@ header {
             );
             &:hover {
               background: linear-gradient(
-              240deg,
-              v.$hdr-grad-lght,
-              v.$hdr-grad-red
-            );
+                240deg,
+                v.$hdr-grad-lght,
+                v.$hdr-grad-red
+              );
             }
           }
         }
@@ -144,6 +146,7 @@ header {
         }
         &#lowerDiv {
           button {
+            cursor: pointer;
             margin-top: 2rem;
             font-family: 'Ubuntu', sans-serif;
             &#start {
@@ -181,6 +184,367 @@ header {
                 background-color: v.$white-clr;
               }
             }
+          }
+        }
+      }
+    }
+  }
+
+  /* ----------------------- Media Queries ----------------------- */
+  @include m.padScreens(47.813em, 63.938em) {
+    /* ------ ($min-wdth, $max-wdth) ------ */
+    background-image: url('../images/bg-pattern-intro-desktop.svg'),
+      linear-gradient(285deg, v.$hdr-grad-red 45%, v.$hdr-grad-lght 85%);
+    background-size: 235%;
+    background-position: 27% 52%;
+    div {
+      &#upperHeader {
+        margin-top: 1.5rem;
+        padding: 0 3rem;
+        img {
+          &#logo {
+            width: 5.4rem;
+            margin-right: 2rem;
+            padding-bottom: 0.8rem;
+          }
+        }
+        #menuDiv {
+          width: 100%;
+          box-shadow: none;
+          display: flex !important;
+          ul {
+            width: 19rem;
+            .listItem {
+              font-family: 'Ubuntu', sans-serif;
+              font-weight: 500;
+              width: min-content;
+              font-size: 1rem;
+              color: v.$lght-gray;
+              text-align: center;
+              padding: 1rem 0;
+              img {
+                &.arrowDark {
+                  display: none;
+                }
+                &.arrowLight {
+                  display: flex;
+                  transition-duration: 0.9s;
+                  margin-left: 0.5rem;
+                }
+                &.flip {
+                  transform: rotate(180deg);
+                }
+              }
+              .dropDown {
+                position: absolute;
+                width: 7.5rem;
+                padding: 1.5rem 0 1.5rem 1.5rem;
+                top: 5.5rem;
+                background-color: v.$white-clr;
+                border-radius: 0.3rem;
+                line-height: 2rem;
+                box-shadow: 0rem 0.4rem 0.8rem rgb(106, 106, 106);
+                a {
+                  width: fit-content;
+                  text-decoration: none;
+                  color: v.$text-grysh-blue;
+                  font-weight: 400;
+                  &:hover {
+                    font-weight: 600;
+                  }
+                }
+                &.hide {
+                  display: none;
+                }
+              }
+              &.clicked {
+                color: v.$white-clr;
+                text-decoration: underline;
+              }
+            }
+          }
+          #login {
+            width: 12rem;
+            border-top: none;
+            a {
+              font-size: 1rem;
+              color: v.$lght-gray;
+              &:hover {
+                text-decoration: underline;
+                color: v.$white-clr;
+              }
+            }
+            button {
+              margin: 0;
+              color: v.$hdr-drk-red;
+              background: v.$white-clr;
+              &:hover {
+                color: v.$white-clr;
+                background: rgba(255, 255, 255, 0.3);
+                border-color: transparent;
+              }
+            }
+          }
+        }
+        #menuIcon {
+          display: none;
+        }
+      }
+      &#lowerHeader {
+        div {
+          text-align: center;
+          h1 {
+            font-size: 2.9rem;
+            font-weight: 400;
+            margin: 1rem 0 0 0;
+          }
+          h3 {
+            font-weight: 300;
+            color: v.$lght-gray;
+            margin: 1.2rem 0;
+          }
+          &#lowerDiv {
+            width: 19rem;
+          }
+        }
+      }
+    }
+  }
+
+  @include m.flippedPadScreens(64em, 73em, 37.5em) {
+    /* ------ ($mn-wdth, $max-wdth, $mn-hgt) ------ */
+    background-image: url('../images/bg-pattern-intro-desktop.svg'),
+      linear-gradient(285deg, v.$hdr-grad-red 45%, v.$hdr-grad-lght 85%);
+    background-size: 235%;
+    background-position: 27% 52%;
+    div {
+      &#upperHeader {
+        margin-top: 1.5rem;
+        padding: 0 7rem;
+        img {
+          &#logo {
+            width: 6rem;
+            margin-right: 4rem;
+            padding-bottom: 0.8rem;
+          }
+        }
+        #menuDiv {
+          width: 100%;
+          box-shadow: none;
+          display: flex !important;
+          ul {
+            width: 19rem;
+            .listItem {
+              font-family: 'Ubuntu', sans-serif;
+              font-weight: 500;
+              width: min-content;
+              font-size: 1rem;
+              color: v.$lght-gray;
+              text-align: center;
+              padding: 1rem 0;
+              img {
+                &.arrowDark {
+                  display: none;
+                }
+                &.arrowLight {
+                  display: flex;
+                  transition-duration: 0.9s;
+                  margin-left: 0.5rem;
+                }
+                &.flip {
+                  transform: rotate(180deg);
+                }
+              }
+              .dropDown {
+                position: absolute;
+                width: 9rem;
+                padding: 1.5rem 0 1.5rem 1.5rem;
+                top: 5.5rem;
+                background-color: v.$white-clr;
+                border-radius: 0.3rem;
+                line-height: 2rem;
+                box-shadow: 0rem 0.4rem 0.8rem rgb(106, 106, 106);
+                a {
+                  width: fit-content;
+                  text-decoration: none;
+                  color: v.$text-grysh-blue;
+                  font-weight: 400;
+                  &:hover {
+                    font-weight: 600;
+                  }
+                }
+                &.hide {
+                  display: none;
+                }
+              }
+              &.clicked {
+                color: v.$white-clr;
+                text-decoration: underline;
+              }
+            }
+          }
+          #login {
+            width: 12rem;
+            border-top: none;
+            a {
+              font-size: 1rem;
+              color: v.$lght-gray;
+              &:hover {
+                text-decoration: underline;
+                color: v.$white-clr;
+              }
+            }
+            button {
+              margin: 0;
+              color: v.$hdr-drk-red;
+              background: v.$white-clr;
+              &:hover {
+                color: v.$white-clr;
+                background: rgba(255, 255, 255, 0.3);
+                border-color: transparent;
+              }
+            }
+          }
+        }
+        #menuIcon {
+          display: none;
+        }
+      }
+      &#lowerHeader {
+        div {
+          text-align: center;
+          h1 {
+            font-size: 3.3rem;
+            font-weight: 400;
+            margin: 1rem 0 0 0;
+          }
+          h3 {
+            font-weight: 300;
+            color: v.$lght-gray;
+            margin: 1.2rem 0;
+          }
+          &#lowerDiv {
+            width: 19rem;
+          }
+        }
+      }
+    }
+  }
+
+  @include m.wideScreens(43rem, 73.75rem) {
+    /* ------ ($min-hgt, $min-wdth) ------ */
+    background-image: url('../images/bg-pattern-intro-desktop.svg'),
+      linear-gradient(285deg, v.$hdr-grad-red 45%, v.$hdr-grad-lght 85%);
+    background-size: 235%;
+    background-position: 27% 52%;
+    div {
+      &#upperHeader {
+        margin-top: 1.5rem;
+        padding: 0 10rem;
+        img {
+          &#logo {
+            width: 6rem;
+            margin-right: 4rem;
+            padding-bottom: 0.8rem;
+          }
+        }
+        #menuDiv {
+          width: 100%;
+          box-shadow: none;
+          display: flex !important;
+          ul {
+            width: 19rem;
+            .listItem {
+              font-family: 'Ubuntu', sans-serif;
+              font-weight: 500;
+              width: min-content;
+              font-size: 1rem;
+              color: v.$lght-gray;
+              text-align: center;
+              padding: 1rem 0;
+              img {
+                &.arrowDark {
+                  display: none;
+                }
+                &.arrowLight {
+                  display: flex;
+                  transition-duration: 0.9s;
+                  margin-left: 0.5rem;
+                }
+                &.flip {
+                  transform: rotate(180deg);
+                }
+              }
+              .dropDown {
+                position: absolute;
+                width: 9rem;
+                padding: 1.5rem 0 1.5rem 1.5rem;
+                top: 5.5rem;
+                background-color: v.$white-clr;
+                border-radius: 0.3rem;
+                line-height: 2rem;
+                box-shadow: 0rem 0.4rem 0.8rem rgb(106, 106, 106);
+                a {
+                  width: fit-content;
+                  text-decoration: none;
+                  color: v.$text-grysh-blue;
+                  font-weight: 400;
+                  &:hover {
+                    font-weight: 600;
+                  }
+                }
+                &.hide {
+                  display: none;
+                }
+              }
+              &.clicked {
+                color: v.$white-clr;
+                text-decoration: underline;
+              }
+            }
+          }
+          #login {
+            width: 12rem;
+            border-top: none;
+            a {
+              font-size: 1rem;
+              color: v.$lght-gray;
+              &:hover {
+                text-decoration: underline;
+                color: v.$white-clr;
+              }
+            }
+            button {
+              margin: 0;
+              color: v.$hdr-drk-red;
+              background: v.$white-clr;
+              &:hover {
+                color: v.$white-clr;
+                background: rgba(255, 255, 255, 0.3);
+                border-color: transparent;
+              }
+            }
+          }
+        }
+        #menuIcon {
+          display: none;
+        }
+      }
+      &#lowerHeader {
+        div {
+          text-align: center;
+          h1 {
+            font-size: 4rem;
+            font-weight: 400;
+            margin: 1rem 0 0 0;
+          }
+          h3 {
+            font-weight: 300;
+            color: v.$lght-gray;
+            margin: 1.2rem 0;
+          }
+          &#lowerDiv {
+            width: 19rem;
           }
         }
       }
