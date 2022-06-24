@@ -68,6 +68,17 @@ body footer {
   justify-content: center;
   align-items: center;
 }
+@media only screen and (min-width: 41.25em) and (max-width: 53.75em) and (max-height: 26.25em) {
+  body {
+    /* --------- ($min-wdth, $max-wdth, $max-hgt) --------- */
+  }
+  body header div#lowerHeader {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
 @media only screen and (min-width: 47.813em) and (max-width: 63.938em) {
   body {
     /* ------ ($min-wdth, $max-wdth) ------ */
@@ -412,7 +423,7 @@ header div#upperHeader #menuIcon #close.hide {
   display: none;
 }
 header div#lowerHeader {
-  padding: 5rem 2.5rem 9rem 2.5rem;
+  padding: 5rem 2.2rem 9rem 2.2rem;
 }
 header div#lowerHeader div {
   text-align: center;
@@ -421,7 +432,7 @@ header div#lowerHeader div h1 {
   font-family: 'Overpass', sans-serif;
   font-weight: 300;
   color: hsl(0deg, 0%, 100%);
-  padding-left: 1.2rem;
+  padding-left: 0.8rem;
 }
 header div#lowerHeader div h3 {
   font-family: 'Overpass', sans-serif;
@@ -461,6 +472,17 @@ header div#lowerHeader div#lowerDiv button#learn {
 header div#lowerHeader div#lowerDiv button#learn:hover {
   color: hsl(356deg, 100%, 66%);
   background-color: hsl(0deg, 0%, 100%);
+}
+@media only screen and (min-width: 41.25em) and (max-width: 53.75em) and (max-height: 26.25em) {
+  header {
+    /* --------- ($min-wdth, $max-wdth, $max-hgt) --------- */
+  }
+  header div#upperHeader {
+    padding: 0 2.5rem;
+  }
+  header div#lowerHeader div#lowerDiv {
+    width: 50vw;
+  }
 }
 @media only screen and (min-width: 47.813em) and (max-width: 63.938em) {
   header {
@@ -823,7 +845,7 @@ main {
 main div#intro img.mobile {
   width: 100vw;
   margin: 1.5rem 0;
-  height: 21rem;
+  height: 90vw;
   object-fit: cover;
 }
 main div#intro img.desktop {
@@ -878,7 +900,7 @@ main div#middle #middleDiv .text {
 main div#end img.mobile {
   width: 100vw;
   margin: 1.5rem 0;
-  height: 22.5rem;
+  height: 90vw;
   object-fit: cover;
 }
 main div#end img.desktop {
@@ -906,6 +928,39 @@ main .title {
   padding: 0 1.5rem;
   text-align: center;
 }
+@media only screen and (min-width: 41.25em) and (max-width: 53.75em) and (max-height: 26.25em) {
+  main {
+    /* --------- ($min-wdth, $max-wdth, $max-hgt) --------- */
+  }
+  main div#intro img.mobile {
+    width: 75vw;
+    margin: 1.5rem 0;
+    height: fit-content;
+    object-fit: cover;
+  }
+  main div#intro img.desktop {
+    display: none;
+  }
+  main div#middle {
+    background-size: 150%;
+    background-position: 49% 140%;
+    background-repeat: no-repeat;
+  }
+  main div#middle img {
+    width: 90vw;
+    position: relative;
+    top: -11rem;
+  }
+  main div#end img.mobile {
+    width: 90vw;
+    margin: 5rem 0 2rem 0;
+    height: fit-content;
+    object-fit: cover;
+  }
+  main div#end img.desktop {
+    display: none;
+  }
+}
 @media only screen and (min-width: 47.813em) and (max-width: 63.938em) {
   main {
     /* ------ ($min-wdth, $max-wdth) ------ */
@@ -916,7 +971,7 @@ main .title {
   main div#intro img.mobile {
     width: 70vw;
     margin: 1.5rem 0;
-    height: 30rem;
+    height: fit-content;
     object-fit: cover;
   }
   main div#intro img.desktop {
@@ -969,7 +1024,7 @@ main .title {
   main div#end img.mobile {
     width: 90vw;
     margin: 5rem 0 2rem 0;
-    height: 31rem;
+    height: fit-content;
     object-fit: cover;
   }
   main div#end img.desktop {
