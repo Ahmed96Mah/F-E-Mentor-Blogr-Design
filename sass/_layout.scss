@@ -42,6 +42,17 @@ body {
   }
 
   /* ----------------------- Media Queries ----------------------- */
+  @include m.flippedMobileScreens(41.25em, 53.75em, 26.25em) {
+    /* --------- ($min-wdth, $max-wdth, $max-hgt) --------- */
+    header {
+      div {
+        &#lowerHeader {
+          @include m.displayFlex(column, nowrap, center, center);
+        }
+      }
+    }
+  }
+
   @include m.padScreens(47.813em, 63.938em) {
     /* ------ ($min-wdth, $max-wdth) ------ */
     header {
