@@ -130,14 +130,14 @@ header {
       }
     }
     &#lowerHeader {
-      padding: 5rem 2.5rem 9rem 2.5rem;
+      padding: 5rem 2.2rem 9rem 2.2rem;
       div {
         text-align: center;
         h1 {
           font-family: 'Overpass', sans-serif;
           font-weight: 300;
           color: v.$white-clr;
-          padding-left: 1.2rem;
+          padding-left: 0.8rem;
         }
         h3 {
           font-family: 'Overpass', sans-serif;
@@ -191,6 +191,22 @@ header {
   }
 
   /* ----------------------- Media Queries ----------------------- */
+  @include m.flippedMobileScreens(41.25em, 53.75em, 26.25em) {
+    /* --------- ($min-wdth, $max-wdth, $max-hgt) --------- */
+    div {
+      &#upperHeader {
+        padding: 0 2.5rem;
+      }
+      &#lowerHeader {
+        div {
+          &#lowerDiv {
+            width: 50vw;
+          }
+        }
+      }
+    }
+  }
+
   @include m.padScreens(47.813em, 63.938em) {
     /* ------ ($min-wdth, $max-wdth) ------ */
     background-image: url('../images/bg-pattern-intro-desktop.svg'),
