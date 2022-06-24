@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;500;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
 /* Media Queries */
 body {
   display: grid;
   grid-template-rows: repeat(3, auto);
   grid-template-columns: 1fr;
-  grid-template-areas: 'header' 'main' 'footer';
+  grid-template-areas: "header" "main" "footer";
   /* ----------------------- Media Queries ----------------------- */
 }
 body header div#upperHeader {
@@ -308,8 +308,7 @@ body footer {
 /* -------- Colors -------- */
 header {
   grid-area: header;
-  background-image: url('../images/bg-pattern-intro-mobile.svg'),
-    linear-gradient(165deg, hsl(13deg, 100%, 72%), hsl(353deg, 100%, 62%));
+  background-image: url("../images/bg-pattern-intro-mobile.svg"), linear-gradient(165deg, hsl(13deg, 100%, 72%), hsl(353deg, 100%, 62%));
   background-size: 340%;
   background-position: 36% 33%;
   border-radius: 0 0 0 6rem;
@@ -324,7 +323,7 @@ header div#upperHeader img#logo {
 }
 header div#upperHeader #menuDiv {
   box-shadow: 0rem 1rem 2rem lightgray;
-  font-family: 'Overpass', sans-serif;
+  font-family: "Overpass", sans-serif;
   font-weight: 600;
 }
 header div#upperHeader #menuDiv ul {
@@ -390,20 +389,12 @@ header div#upperHeader #menuDiv #login button {
   border-radius: 1.5rem;
   padding: 0.8rem 2rem;
   cursor: pointer;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   margin-top: 1rem;
-  background: linear-gradient(
-    60deg,
-    hsl(13deg, 100%, 72%),
-    hsl(353deg, 100%, 62%)
-  );
+  background: linear-gradient(60deg, hsl(13deg, 100%, 72%), hsl(353deg, 100%, 62%));
 }
 header div#upperHeader #menuDiv #login button:hover {
-  background: linear-gradient(
-    240deg,
-    hsl(13deg, 100%, 72%),
-    hsl(353deg, 100%, 62%)
-  );
+  background: linear-gradient(240deg, hsl(13deg, 100%, 72%), hsl(353deg, 100%, 62%));
 }
 header div#upperHeader #menuDiv.hide {
   display: none;
@@ -423,26 +414,27 @@ header div#upperHeader #menuIcon #close.hide {
   display: none;
 }
 header div#lowerHeader {
-  padding: 5rem 2.2rem 9rem 2.2rem;
+  padding: 5rem 2.1rem 9rem 2.1rem;
 }
 header div#lowerHeader div {
   text-align: center;
 }
 header div#lowerHeader div h1 {
-  font-family: 'Overpass', sans-serif;
+  font-family: "Overpass", sans-serif;
   font-weight: 300;
   color: hsl(0deg, 0%, 100%);
   padding-left: 0.8rem;
 }
-header div#lowerHeader div h3 {
-  font-family: 'Overpass', sans-serif;
+header div#lowerHeader div h2 {
+  font-size: 1.1rem;
+  font-family: "Overpass", sans-serif;
   font-weight: 300;
   color: lightgray;
 }
 header div#lowerHeader div#lowerDiv button {
   cursor: pointer;
   margin-top: 2rem;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
 }
 header div#lowerHeader div#lowerDiv button#start {
   /* $clr, $fnt-size, $fnt-wght, $bckGrnd-clr, $brdr-clr, $brdr-radius, $padg-top-btm, $padg-lft-rgt */
@@ -487,12 +479,7 @@ header div#lowerHeader div#lowerDiv button#learn:hover {
 @media only screen and (min-width: 47.813em) and (max-width: 63.938em) {
   header {
     /* ------ ($min-wdth, $max-wdth) ------ */
-    background-image: url('../images/bg-pattern-intro-desktop.svg'),
-      linear-gradient(
-        285deg,
-        hsl(353deg, 100%, 62%) 45%,
-        hsl(13deg, 100%, 72%) 85%
-      );
+    background-image: url("../images/bg-pattern-intro-desktop.svg"), linear-gradient(285deg, hsl(353deg, 100%, 62%) 45%, hsl(13deg, 100%, 72%) 85%);
     background-size: 235%;
     background-position: 27% 52%;
   }
@@ -514,7 +501,7 @@ header div#lowerHeader div#lowerDiv button#learn:hover {
     width: 19rem;
   }
   header div#upperHeader #menuDiv ul .listItem {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: "Ubuntu", sans-serif;
     font-weight: 500;
     width: min-content;
     font-size: 1rem;
@@ -592,7 +579,7 @@ header div#lowerHeader div#lowerDiv button#learn:hover {
     font-weight: 400;
     margin: 1rem 0 0 0;
   }
-  header div#lowerHeader div h3 {
+  header div#lowerHeader div h2 {
     font-weight: 300;
     color: lightgray;
     margin: 1.2rem 0;
@@ -604,12 +591,7 @@ header div#lowerHeader div#lowerDiv button#learn:hover {
 @media only screen and (min-width: 64em) and (max-width: 73em) and (min-height: 37.5em) {
   header {
     /* ------ ($mn-wdth, $max-wdth, $mn-hgt) ------ */
-    background-image: url('../images/bg-pattern-intro-desktop.svg'),
-      linear-gradient(
-        285deg,
-        hsl(353deg, 100%, 62%) 45%,
-        hsl(13deg, 100%, 72%) 85%
-      );
+    background-image: url("../images/bg-pattern-intro-desktop.svg"), linear-gradient(285deg, hsl(353deg, 100%, 62%) 45%, hsl(13deg, 100%, 72%) 85%);
     background-size: 235%;
     background-position: 27% 52%;
   }
@@ -631,7 +613,7 @@ header div#lowerHeader div#lowerDiv button#learn:hover {
     width: 19rem;
   }
   header div#upperHeader #menuDiv ul .listItem {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: "Ubuntu", sans-serif;
     font-weight: 500;
     width: min-content;
     font-size: 1rem;
@@ -709,7 +691,7 @@ header div#lowerHeader div#lowerDiv button#learn:hover {
     font-weight: 400;
     margin: 1rem 0 0 0;
   }
-  header div#lowerHeader div h3 {
+  header div#lowerHeader div h2 {
     font-weight: 300;
     color: lightgray;
     margin: 1.2rem 0;
@@ -721,12 +703,7 @@ header div#lowerHeader div#lowerDiv button#learn:hover {
 @media only screen and (min-height: 43rem) and (min-width: 73.75rem) {
   header {
     /* ------ ($min-hgt, $min-wdth) ------ */
-    background-image: url('../images/bg-pattern-intro-desktop.svg'),
-      linear-gradient(
-        285deg,
-        hsl(353deg, 100%, 62%) 45%,
-        hsl(13deg, 100%, 72%) 85%
-      );
+    background-image: url("../images/bg-pattern-intro-desktop.svg"), linear-gradient(285deg, hsl(353deg, 100%, 62%) 45%, hsl(13deg, 100%, 72%) 85%);
     background-size: 235%;
     background-position: 27% 52%;
   }
@@ -748,7 +725,7 @@ header div#lowerHeader div#lowerDiv button#learn:hover {
     width: 19rem;
   }
   header div#upperHeader #menuDiv ul .listItem {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: "Ubuntu", sans-serif;
     font-weight: 500;
     width: min-content;
     font-size: 1rem;
@@ -826,7 +803,8 @@ header div#lowerHeader div#lowerDiv button#learn:hover {
     font-weight: 400;
     margin: 1rem 0 0 0;
   }
-  header div#lowerHeader div h3 {
+  header div#lowerHeader div h2 {
+    font-size: 1.25rem;
     font-weight: 300;
     color: lightgray;
     margin: 1.2rem 0;
@@ -839,7 +817,7 @@ header div#lowerHeader div#lowerDiv button#learn:hover {
 main {
   grid-area: main;
   padding: 4rem 0;
-  font-family: 'Overpass', sans-serif;
+  font-family: "Overpass", sans-serif;
   /* ----------------------- Media Queries ----------------------- */
 }
 main div#intro img.mobile {
@@ -867,8 +845,7 @@ main div#intro p.text {
 }
 main div#middle {
   margin-top: 17rem;
-  background-image: url('../images/bg-pattern-circles.svg'),
-    linear-gradient(135deg, hsl(237deg, 17%, 21%), hsl(237deg, 23%, 32%));
+  background-image: url("../images/bg-pattern-circles.svg"), linear-gradient(135deg, hsl(237deg, 17%, 21%), hsl(237deg, 23%, 32%));
   background-size: 160%;
   background-position: 49% -280%;
   background-repeat: no-repeat;
@@ -1250,7 +1227,7 @@ footer {
   background-color: hsl(240deg, 10%, 16%);
   padding: 5rem 0;
   border-radius: 0 6rem 0 0;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   /* ----------------------- Media Queries ----------------------- */
 }
 footer #footerLogo {
