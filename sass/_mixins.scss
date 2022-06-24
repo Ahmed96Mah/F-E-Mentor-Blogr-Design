@@ -32,6 +32,12 @@
 }
 
 /* Media Queries */
+@mixin flippedMobileScreens($min-wdth, $max-wdth, $max-hgt) {
+  @media only screen and (min-width: $min-wdth) and (max-width: $max-wdth) and (max-height: $max-hgt) {
+    @content;
+  }
+}
+
 @mixin padScreens($min-wdth, $max-wdth) {
   @media only screen and (min-width: $min-wdth) and (max-width: $max-wdth) {
     @content;
