@@ -1,6 +1,8 @@
 @use 'variables' as v;
+@use 'mixins' as m;
 
 footer {
+  grid-area: footer;
   background-color: v.$ftr-drk-blue;
   padding: 5rem 0;
   border-radius: 0 6rem 0 0;
@@ -21,6 +23,10 @@ footer {
         a {
           text-decoration: none;
           color: v.$drk-gray;
+          &:hover {
+            color: v.$ftr-sky-blue;
+            text-decoration: underline;
+          }
         }
       }
     }
@@ -31,8 +37,31 @@ footer {
     margin-top: 1rem;
     font-size: 12px;
     text-align: center;
+    line-height: 1.7rem;
     a {
       color: v.$drk-gray;
+      &:hover {
+        color: v.$ftr-sky-blue;
+      }
+    }
+  }
+
+  /* ----------------------- Media Queries ----------------------- */
+  @include m.padScreens(47.813em, 63.938em) {
+    /* ------ ($min-wdth, $max-wdth) ------ */
+    #footerLogo {
+      margin-bottom: 4rem;
+      margin-left: 2rem;
+    }
+    .attribution {
+      width: 13rem;
+    }
+  }
+
+  @include m.wideScreens(43rem, 73.75rem) {
+    /* ------ ($min-hgt, $min-wdth) ------ */
+    .attribution {
+      width: 15rem;
     }
   }
 }
