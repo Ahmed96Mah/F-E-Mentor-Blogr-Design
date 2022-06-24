@@ -40,4 +40,138 @@ body {
   footer {
     @include m.displayFlex(column, nowrap, center, center);
   }
+
+  /* ----------------------- Media Queries ----------------------- */
+  @include m.padScreens(47.813em, 63.938em) {
+    /* ------ ($min-wdth, $max-wdth) ------ */
+    header {
+      div {
+        &#upperHeader {
+          @include m.displayFlex(row, nowrap, space-around, center);
+          #menuDiv {
+            @include m.displayFlex(row, nowrap, space-between, center);
+            ul {
+              @include m.displayFlex(row, nowrap, space-between, center);
+              .listItem {
+                @include m.displayFlex(row, nowrap, space-between, center);
+              }
+              &.dropDown {
+                @include m.displayFlex(column, nowrap, center, flex-start);
+              }
+            }
+            #login {
+              @include m.displayFlex(row, nowrap, space-between, center);
+            }
+          }
+        }
+        &#lowerHeader {
+          @include m.displayFlex(column, nowrap, center, center);
+          #lowerDiv {
+            @include m.displayFlex(row, nowrap, space-between, center);
+          }
+        }
+      }
+    }
+    footer {
+      @include m.displayFlex(row, nowrap, space-around, flex-start);
+    }
+  }
+
+  @include m.flippedPadScreens(64em, 75em, 37.5em) {
+    /* ------ ($mn-wdth, $max-wdth, $mn-hgt) ------ */
+    header {
+      div {
+        &#upperHeader {
+          @include m.displayFlex(row, nowrap, space-around, center);
+          #menuDiv {
+            @include m.displayFlex(row, nowrap, space-between, center);
+            ul {
+              @include m.displayFlex(row, nowrap, space-between, center);
+              .listItem {
+                @include m.displayFlex(row, nowrap, space-between, center);
+              }
+              &.dropDown {
+                @include m.displayFlex(column, nowrap, center, flex-start);
+              }
+            }
+            #login {
+              @include m.displayFlex(row, nowrap, space-between, center);
+            }
+          }
+        }
+        &#lowerHeader {
+          @include m.displayFlex(column, nowrap, center, center);
+          #lowerDiv {
+            @include m.displayFlex(row, nowrap, space-between, center);
+          }
+        }
+      }
+    }
+    main {
+      @include m.displayFlex(column, nowrap, center, center);
+      div {
+        &#intro {
+          @include m.displayFlex(row, nowrap, space-between, center);
+        }
+        &#middle {
+          @include m.displayFlex(row, nowrap, space-between, center);
+        }
+        &#end {
+          @include m.displayFlex(row, nowrap, space-around, center);
+        }
+      }
+    }
+    footer {
+      @include m.displayFlex(row, nowrap, space-around, flex-start);
+    }
+  }
+
+  @include m.wideScreens(43rem, 73.75rem) {
+    /* ------ ($min-hgt, $min-wdth) ------ */
+    header {
+      div {
+        &#upperHeader {
+          @include m.displayFlex(row, nowrap, space-around, center);
+          #menuDiv {
+            @include m.displayFlex(row, nowrap, space-between, center);
+            ul {
+              @include m.displayFlex(row, nowrap, space-between, center);
+              .listItem {
+                @include m.displayFlex(row, nowrap, space-between, center);
+              }
+              &.dropDown {
+                @include m.displayFlex(column, nowrap, center, flex-start);
+              }
+            }
+            #login {
+              @include m.displayFlex(row, nowrap, space-between, center);
+            }
+          }
+        }
+        &#lowerHeader {
+          @include m.displayFlex(column, nowrap, center, center);
+          #lowerDiv {
+            @include m.displayFlex(row, nowrap, space-between, center);
+          }
+        }
+      }
+    }
+    main {
+      @include m.displayFlex(column, nowrap, center, center);
+      div {
+        &#intro {
+          @include m.displayFlex(row, nowrap, space-between, center);
+        }
+        &#middle {
+          @include m.displayFlex(row, nowrap, space-between, center);
+        }
+        &#end {
+          @include m.displayFlex(row, nowrap, space-around, center);
+        }
+      }
+    }
+    footer {
+      @include m.displayFlex(row, nowrap, space-around, flex-start);
+    }
+  }
 }
