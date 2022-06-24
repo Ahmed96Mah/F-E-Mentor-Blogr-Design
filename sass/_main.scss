@@ -1,6 +1,8 @@
 @use 'variables' as v;
+@use 'mixins' as m;
 
 main {
+  grid-area: main;
   padding: 4rem 0;
   font-family: 'Overpass', sans-serif;
   div {
@@ -100,5 +102,310 @@ main {
     margin-bottom: 1rem;
     padding: 0 1.5rem;
     text-align: center;
+  }
+
+  /* ----------------------- Media Queries ----------------------- */
+  @include m.padScreens(47.813em, 63.938em) {
+    /* ------ ($min-wdth, $max-wdth) ------ */
+    #mainTitle {
+      font-size: 2.8rem;
+    }
+    div {
+      &#intro {
+        img {
+          &.mobile {
+            width: 70vw;
+            margin: 1.5rem 0;
+            height: 30rem;
+            object-fit: cover;
+          }
+          &.desktop {
+            display: none;
+          }
+        }
+        p {
+          line-height: 1.7rem;
+          padding: 0 2.5rem;
+          &.title {
+            font-weight: 400;
+            font-size: 2rem;
+            padding: 0 4rem;
+          }
+          &.text {
+            text-align: center;
+            font-size: 1.3rem;
+            margin: 0;
+            color: v.$text-grysh-blue;
+            padding: 1rem 4rem 1rem 4rem;
+          }
+        }
+      }
+      &#middle {
+        background-size: 150%;
+        background-position: 49% 120%;
+        background-repeat: no-repeat;
+        img {
+          width: 90vw;
+          position: relative;
+          top: -11rem;
+        }
+        #middleDiv {
+          position: relative;
+          bottom: 7rem;
+          .title {
+            color: v.$white-clr;
+            font-size: 2.3rem;
+            font-weight: 500;
+            margin: 0.85rem 0 1rem 0;
+          }
+          .text {
+            font-size: 1.3rem;
+            text-align: center;
+            line-height: 1.7rem;
+            padding: 0 3rem;
+            margin: 0;
+            color: v.$lght-gray;
+          }
+        }
+      }
+      &#end {
+        img {
+          &.mobile {
+            width: 90vw;
+            margin: 5rem 0 2rem 0;
+            height: 31rem;
+            object-fit: cover;
+          }
+          &.desktop {
+            display: none;
+          }
+        }
+        #endDiv {
+          p {
+            line-height: 1.7rem;
+            padding: 0 2.5rem;
+            &.title {
+              text-align: center;
+              font-size: 2rem;
+              padding: 0 4rem;
+            }
+            &.text {
+              text-align: center;
+              font-size: 1.3rem;
+              margin: 0;
+              color: v.$text-grysh-blue;
+              padding-bottom: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include m.flippedPadScreens(64em, 73em, 37.5em) {
+    /* ------ ($mn-wdth, $max-wdth, $mn-hgt) ------ */
+    padding: 0;
+    #mainTitle {
+      position: relative;
+      bottom: -8rem;
+      font-size: 2.5rem;
+      font-weight: 500;
+    }
+    .title {
+      font-size: 1.6rem;
+      font-weight: 400;
+      padding: 0 1.5rem;
+      text-align: center;
+    }
+    div {
+      &#intro {
+        height: max-content;
+        width: 100vw;
+        img {
+          &.mobile {
+            display: none;
+          }
+          &.desktop {
+            object-fit: cover;
+            object-position: 10% 0%;
+            display: block;
+            height: 56rem;
+            width: 48vw;
+          }
+        }
+        p {
+          width: 39vw;
+          &.title {
+            text-align: left;
+            margin-left: 8vw !important;
+            padding: 0;
+          }
+          &.text {
+            text-align: left;
+            margin-left: 8vw !important;
+            padding: 0;
+          }
+        }
+      }
+      &#middle {
+        background-size: auto;
+        background-position: -80% 86%;
+        margin-top: 3rem;
+        height: 25rem;
+        img {
+          width: 50vw;
+          position: relative;
+          top: 1rem;
+          left: 3rem;
+        }
+        #middleDiv {
+          position: inherit;
+          bottom: auto;
+          margin: 0 5vw 0 7vw;
+          .title {
+            text-align: left;
+          }
+          .text {
+            text-align: left;
+            font-weight: 300;
+          }
+        }
+      }
+      &#end {
+        margin-top: 7rem;
+        img {
+          &.mobile {
+            display: none;
+          }
+          &.desktop {
+            display: block;
+            object-fit: none;
+            object-position: 90% 0%;
+            display: block;
+            height: 56rem;
+            width: 50vw;
+          }
+        }
+        #endDiv {
+          padding-right: 6vw;
+          padding-left: 2vw;
+          p {
+            padding-left: 0;
+            &.title {
+              padding-left: 0;
+              text-align: left;
+            }
+            &.text {
+              padding-left: 0;
+              text-align: left;
+              margin-bottom: 5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include m.wideScreens(43rem, 73.75rem) {
+    /* ------ ($min-hgt, $min-wdth) ------ */
+    padding: 0;
+    #mainTitle {
+      position: relative;
+      bottom: -8rem;
+      font-size: 2.5rem;
+      font-weight: 500;
+    }
+    .title {
+      font-size: 1.6rem;
+      font-weight: 400;
+      padding: 0 1.5rem;
+      text-align: center;
+    }
+    div {
+      &#intro {
+        height: max-content;
+        width: 100vw;
+        img {
+          &.mobile {
+            display: none;
+          }
+          &.desktop {
+            object-fit: none;
+            object-position: -25% 0%;
+            display: block;
+            height: 56rem;
+            width: 50vw;
+          }
+        }
+        p {
+          width: 34vw;
+          &.title {
+            text-align: left;
+            margin-left: 10vw !important;
+            padding-left: 0;
+          }
+          &.text {
+            text-align: left;
+            margin-left: 10vw !important;
+            padding-left: 0;
+          }
+        }
+      }
+      &#middle {
+        background-size: auto;
+        background-position: -50% 86%;
+        margin-top: 3rem;
+        height: 25rem;
+        img {
+          width: 50vw;
+          position: relative;
+          top: 1rem;
+          left: 7rem;
+        }
+        #middleDiv {
+          position: inherit;
+          bottom: auto;
+          margin: 0 8vw 0 10.5vw;
+          .title {
+            text-align: left;
+          }
+          .text {
+            text-align: left;
+            font-weight: 300;
+          }
+        }
+      }
+      &#end {
+        margin-top: 7rem;
+        img {
+          &.mobile {
+            display: none;
+          }
+          &.desktop {
+            display: block;
+            object-fit: none;
+            object-position: 109% 0%;
+            display: block;
+            height: 56rem;
+            width: 50vw;
+          }
+        }
+        #endDiv {
+          padding-right: 11rem;
+          p {
+            padding-left: 0;
+            &.title {
+              padding-left: 0;
+              text-align: left;
+            }
+            &.text {
+              padding-left: 0;
+              text-align: left;
+              margin-bottom: 5rem;
+            }
+          }
+        }
+      }
+    }
   }
 }
