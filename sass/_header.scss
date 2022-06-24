@@ -130,7 +130,7 @@ header {
       }
     }
     &#lowerHeader {
-      padding: 5rem 2.2rem 9rem 2.2rem;
+      padding: 5rem 2.1rem 9rem 2.1rem;
       div {
         text-align: center;
         h1 {
@@ -139,7 +139,8 @@ header {
           color: v.$white-clr;
           padding-left: 0.8rem;
         }
-        h3 {
+        h2 {
+          font-size: 1.1rem;
           font-family: 'Overpass', sans-serif;
           font-weight: 300;
           color: v.$lght-gray;
@@ -314,7 +315,7 @@ header {
             font-weight: 400;
             margin: 1rem 0 0 0;
           }
-          h3 {
+          h2 {
             font-weight: 300;
             color: v.$lght-gray;
             margin: 1.2rem 0;
@@ -434,7 +435,7 @@ header {
             font-weight: 400;
             margin: 1rem 0 0 0;
           }
-          h3 {
+          h2 {
             font-weight: 300;
             color: v.$lght-gray;
             margin: 1.2rem 0;
@@ -554,7 +555,8 @@ header {
             font-weight: 400;
             margin: 1rem 0 0 0;
           }
-          h3 {
+          h2 {
+            font-size: 1.25rem;
             font-weight: 300;
             color: v.$lght-gray;
             margin: 1.2rem 0;
