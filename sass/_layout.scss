@@ -42,7 +42,7 @@ body {
   }
 
   /* ----------------------- Media Queries ----------------------- */
-  @include m.flippedMobileScreens(41.25em, 53.75em, 26.25em) {
+  @include m.flippedMobileScreens(41.25rem, 53.75rem, 26.25rem) {
     /* --------- ($min-wdth, $max-wdth, $max-hgt) --------- */
     header {
       div {
@@ -53,7 +53,7 @@ body {
     }
   }
 
-  @include m.padScreens(47.813em, 63.938em) {
+  @include m.padScreens(47.813rem, 63.938rem) {
     /* ------ ($min-wdth, $max-wdth) ------ */
     header {
       div {
@@ -88,7 +88,7 @@ body {
     }
   }
 
-  @include m.flippedPadScreens(64em, 75em, 37.5em) {
+  @include m.flippedPadScreens(64rem, 75rem, 37.5rem) {
     /* ------ ($mn-wdth, $max-wdth, $mn-hgt) ------ */
     header {
       div {
@@ -137,7 +137,7 @@ body {
     }
   }
 
-  @include m.wideScreens(43rem, 73.75rem) {
+  @include m.wideScreens(37.5rem, 73.75rem) {
     /* ------ ($min-hgt, $min-wdth) ------ */
     header {
       div {
