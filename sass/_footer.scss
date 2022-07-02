@@ -47,7 +47,7 @@ footer {
   }
 
   /* ----------------------- Media Queries ----------------------- */
-  @include m.padScreens(47.813em, 63.938em) {
+  @include m.padScreens(47.813rem, 63.938rem) {
     /* ------ ($min-wdth, $max-wdth) ------ */
     #footerLogo {
       margin-bottom: 4rem;
@@ -58,7 +58,7 @@ footer {
     }
   }
 
-  @include m.wideScreens(43rem, 73.75rem) {
+  @include m.wideScreens(37.5rem, 73.75rem) {
     /* ------ ($min-hgt, $min-wdth) ------ */
     .attribution {
       width: 15rem;
