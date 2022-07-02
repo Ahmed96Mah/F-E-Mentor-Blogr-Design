@@ -68,7 +68,7 @@ body footer {
   justify-content: center;
   align-items: center;
 }
-@media only screen and (min-width: 41.25em) and (max-width: 53.75em) and (max-height: 26.25em) {
+@media only screen and (min-width: 41.25rem) and (max-width: 53.75rem) and (max-height: 26.25rem) {
   body {
     /* --------- ($min-wdth, $max-wdth, $max-hgt) --------- */
   }
@@ -79,7 +79,7 @@ body footer {
     align-items: center;
   }
 }
-@media only screen and (min-width: 47.813em) and (max-width: 63.938em) {
+@media only screen and (min-width: 47.813rem) and (max-width: 63.938rem) {
   body {
     /* ------ ($min-wdth, $max-wdth) ------ */
   }
@@ -138,7 +138,7 @@ body footer {
     align-items: flex-start;
   }
 }
-@media only screen and (min-width: 64em) and (max-width: 75em) and (min-height: 37.5em) {
+@media only screen and (min-width: 64rem) and (max-width: 75rem) and (min-height: 37.5rem) {
   body {
     /* ------ ($mn-wdth, $max-wdth, $mn-hgt) ------ */
   }
@@ -221,7 +221,7 @@ body footer {
     align-items: flex-start;
   }
 }
-@media only screen and (min-height: 43rem) and (min-width: 73.75rem) {
+@media only screen and (min-height: 37.5rem) and (min-width: 73.75rem) {
   body {
     /* ------ ($min-hgt, $min-wdth) ------ */
   }
@@ -465,7 +465,7 @@ header div#lowerHeader div#lowerDiv button#learn:hover {
   color: hsl(356deg, 100%, 66%);
   background-color: hsl(0deg, 0%, 100%);
 }
-@media only screen and (min-width: 41.25em) and (max-width: 53.75em) and (max-height: 26.25em) {
+@media only screen and (min-width: 41.25rem) and (max-width: 53.75rem) and (max-height: 26.25rem) {
   header {
     /* --------- ($min-wdth, $max-wdth, $max-hgt) --------- */
   }
@@ -476,7 +476,7 @@ header div#lowerHeader div#lowerDiv button#learn:hover {
     width: 50vw;
   }
 }
-@media only screen and (min-width: 47.813em) and (max-width: 63.938em) {
+@media only screen and (min-width: 47.813rem) and (max-width: 63.938rem) {
   header {
     /* ------ ($min-wdth, $max-wdth) ------ */
     background-image: url("../images/bg-pattern-intro-desktop.svg"), linear-gradient(285deg, hsl(353deg, 100%, 62%) 45%, hsl(13deg, 100%, 72%) 85%);
@@ -588,7 +588,7 @@ header div#lowerHeader div#lowerDiv button#learn:hover {
     width: 19rem;
   }
 }
-@media only screen and (min-width: 64em) and (max-width: 73em) and (min-height: 37.5em) {
+@media only screen and (min-width: 64rem) and (max-width: 75rem) and (min-height: 37.5rem) {
   header {
     /* ------ ($mn-wdth, $max-wdth, $mn-hgt) ------ */
     background-image: url("../images/bg-pattern-intro-desktop.svg"), linear-gradient(285deg, hsl(353deg, 100%, 62%) 45%, hsl(13deg, 100%, 72%) 85%);
@@ -700,7 +700,7 @@ header div#lowerHeader div#lowerDiv button#learn:hover {
     width: 19rem;
   }
 }
-@media only screen and (min-height: 43rem) and (min-width: 73.75rem) {
+@media only screen and (min-height: 37.5rem) and (min-width: 73.75rem) {
   header {
     /* ------ ($min-hgt, $min-wdth) ------ */
     background-image: url("../images/bg-pattern-intro-desktop.svg"), linear-gradient(285deg, hsl(353deg, 100%, 62%) 45%, hsl(13deg, 100%, 72%) 85%);
@@ -905,7 +905,7 @@ main .title {
   padding: 0 1.5rem;
   text-align: center;
 }
-@media only screen and (min-width: 41.25em) and (max-width: 53.75em) and (max-height: 26.25em) {
+@media only screen and (min-width: 41.25rem) and (max-width: 53.75rem) and (max-height: 26.25rem) {
   main {
     /* --------- ($min-wdth, $max-wdth, $max-hgt) --------- */
   }
@@ -938,7 +938,7 @@ main .title {
     display: none;
   }
 }
-@media only screen and (min-width: 47.813em) and (max-width: 63.938em) {
+@media only screen and (min-width: 47.813rem) and (max-width: 63.938rem) {
   main {
     /* ------ ($min-wdth, $max-wdth) ------ */
   }
@@ -1024,7 +1024,7 @@ main .title {
     padding-bottom: 1rem;
   }
 }
-@media only screen and (min-width: 64em) and (max-width: 73em) and (min-height: 37.5em) {
+@media only screen and (min-width: 64rem) and (max-width: 75rem) and (min-height: 37.5rem) {
   main {
     /* ------ ($mn-wdth, $max-wdth, $mn-hgt) ------ */
     padding: 0;
@@ -1123,7 +1123,7 @@ main .title {
     margin-bottom: 5rem;
   }
 }
-@media only screen and (min-height: 43rem) and (min-width: 73.75rem) {
+@media only screen and (min-height: 37.5rem) and (min-width: 73.75rem) {
   main {
     /* ------ ($min-hgt, $min-wdth) ------ */
     padding: 0;
@@ -1266,7 +1266,7 @@ footer .attribution a {
 footer .attribution a:hover {
   color: deepskyblue;
 }
-@media only screen and (min-width: 47.813em) and (max-width: 63.938em) {
+@media only screen and (min-width: 47.813rem) and (max-width: 63.938rem) {
   footer {
     /* ------ ($min-wdth, $max-wdth) ------ */
   }
@@ -1278,7 +1278,7 @@ footer .attribution a:hover {
     width: 13rem;
   }
 }
-@media only screen and (min-height: 43rem) and (min-width: 73.75rem) {
+@media only screen and (min-height: 37.5rem) and (min-width: 73.75rem) {
   footer {
     /* ------ ($min-hgt, $min-wdth) ------ */
   }
