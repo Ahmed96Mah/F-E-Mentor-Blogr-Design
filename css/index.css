@@ -821,7 +821,7 @@ main {
   /* ----------------------- Media Queries ----------------------- */
 }
 main div#intro img.mobile {
-  width: 100vw;
+  width: 100%;
   margin: 1.5rem 0;
   height: 90vw;
   object-fit: cover;
@@ -1043,7 +1043,7 @@ main .title {
   }
   main div#intro {
     height: max-content;
-    width: 100vw;
+    width: 100%;
   }
   main div#intro img.mobile {
     display: none;
@@ -1142,7 +1142,7 @@ main .title {
   }
   main div#intro {
     height: max-content;
-    width: 100vw;
+    width: 100%;
   }
   main div#intro img.mobile {
     display: none;
